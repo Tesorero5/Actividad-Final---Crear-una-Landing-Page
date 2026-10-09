@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Paleta de colores */
+
+:root {
+    --rojo: #BE4948;
+    --amarillo: #F5EEA0;
+    --azul: #2596BE;
+    --blanco: #FFFFFF;
+    --texto: #343434;
+    --fondo: #FFFDF5;
+    --amarillo-claro: #FFF9D8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: "Source Code Pro", monospace;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 5%;
+    background-color: var(--rojo);
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--blanco);
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.enlace {
+    color: var(--blanco);
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.enlace:hover,
+.enlace.activo {
+    background-color: var(--amarillo);
+    color: var(--rojo);
+}
+
+/* Presentación */
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+    gap: 2.5rem;
+    padding: 4rem 8%;
+    background-color: var(--amarillo);
+}
+
+.hero-contenido {
+    max-width: 600px;
+}
+
+.etiqueta {
+    color: var(--rojo);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+    line-height: 1.2;
+}
+
+h1 {
+    margin: 1rem 0;
+    color: var(--rojo);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.hero-descripcion {
+    margin-bottom: 2rem;
+}
+
+.hero-imagen {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border: 6px solid var(--blanco);
+}
+
+/* Botones */
+
+.boton {
+    display: inline-block;
+    padding: 0.85rem 1.4rem;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border: 2px solid var(--rojo);
+    border-radius: 6px;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.boton:hover {
+    background-color: var(--azul);
+    border-color: var(--azul);
+    color: var(--blanco);
+}
+
+.boton-secundario {
+    background-color: var(--amarillo);
+    border-color: var(--amarillo);
+    color: var(--rojo);
+}
+
+/* Sección de servicios */
+
+.servicios {
+    padding: 4rem 8%;
+}
+
+.seccion-encabezado {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.seccion-encabezado h2,
+.invitacion h2 {
+    color: var(--rojo);
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+.servicios-grid,
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.servicio,
+.contacto-tarjeta {
+    padding: 1.75rem;
+    background-color: var(--blanco);
+    border: 1px solid var(--amarillo);
+    border-top: 5px solid var(--rojo);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.servicio-numero {
+    margin: 0;
+    color: var(--azul);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.servicio h3,
+.contacto-tarjeta h3 {
+    color: var(--rojo);
+    font-size: 1.5rem;
+}
+
+/* Página de contacto */
+
+.contacto {
+    padding: 4rem 8%;
+}
+
+.contacto-tarjeta p {
+    overflow-wrap: break-word;
+}
+
+/* Invitación al catálogo */
+
+.invitacion {
+    padding: 3rem 8%;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.invitacion h2 {
+    color: var(--amarillo);
+}
+
+.invitacion .etiqueta {
+    color: var(--amarillo);
+}
+
+/* Pie de página */
+
+.pie-pagina {
+    padding: 2rem 5%;
+    background-color: var(--texto);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.pie-pagina p {
+    margin: 0.5rem 0;
+}
+
+.pie-pagina .copyright {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Presentación del catálogo */
+
+.catalogo-intro,
+.contacto-intro {
+    padding: 3.5rem 8%;
+    background-color: var(--amarillo);
+    text-align: center;
+}
+
+.catalogo-intro h1,
+.contacto-intro h1 {
+    margin: 0.5rem 0 1rem;
+}
+
+.catalogo-intro>p:last-child,
+.contacto-intro>p:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Categorías */
+
+.categorias {
+    padding: 4rem 8%;
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+.categoria-imagen {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.categoria-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    gap: 0.75rem;
+    padding: 1.5rem;
+}
+
+.categoria-contenido h3 {
+    margin: 0;
+    color: var(--rojo);
+    font-size: 1.6rem;
+}
+
+.categoria-contenido p {
+    margin: 0 0 0.5rem;
+}
+
+.categoria-contenido .boton {
+    margin-top: auto;
+}
+
+/* Selección de disfraces */
+
+.seleccion {
+    padding: 4rem 8%;
+    background-color: var(--amarillo-claro);
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.producto {
+    overflow: hidden;
+    background-color: var(--blanco);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.producto-contenido {
+    padding: 1.25rem;
+}
+
+.producto-categoria {
+    margin: 0;
+    color: var(--azul);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.producto-contenido h3 {
+    margin: 0.5rem 0 0;
+    color: var(--rojo);
+    font-size: 1.25rem;
+}
